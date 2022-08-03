@@ -4,8 +4,8 @@ var dateData = []
 /*   Creating a Chart */
 
 
-async function lineChart(){
-await getIngresses()
+async function barChart(){
+await getIngresses2()
 
   const data = {
     labels: ["Enero", "Febrero", "Marzo", "Abril"],
@@ -30,10 +30,11 @@ const myChart = new Chart(
   config
 );
 }
-lineChart()
+barChart()
+setInterval("barChart()",10000);
 
 /* Gerring info from API */
-async function getIngresses(){
+async function getIngresses2(){
     const apiUrl = "https://node-api-iot.herokuapp.com/ingress"
     //const apiUrl = "https://api.datos.gob.mx/v1/precio.gasolina.publico"
     const response = await fetch(apiUrl)
@@ -87,7 +88,13 @@ async function getIngresses(){
       }
       
     }
-    
+    const formatterDolar = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD'
+    })
+var promedioMes =totalxMes[0] + totalxMes[1] + totalxMes[2] + totalxMes[3]
+
+document.getElementById("promedio-mes").innerHTML = formatterDolar.format((promedioMes/4)*250)
 dateData = totalxMes
 
 }
