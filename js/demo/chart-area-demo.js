@@ -72,8 +72,8 @@ await getIngresses()
     labels: ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"],
     datasets: [{
       label: 'Ingresos Semanales',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
+      backgroundColor: 'rgba(6, 163, 218,0.4)',
+      borderColor: 'rgb(11, 132, 141)',
       data: dayData,
     }]
   };

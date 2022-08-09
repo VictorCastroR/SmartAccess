@@ -11,8 +11,8 @@ await getIngresses2()
     labels: ["Enero", "Febrero", "Marzo", "Abril"],
     datasets: [{
       label: 'Ingresos 1er Cuatrimestre',
-      backgroundColor: 'rgb(255, 99, 132)',
-      borderColor: 'rgb(255, 99, 132)',
+      backgroundColor: 'rgba(5, 174, 207,0.4)',
+      borderColor: 'rgb(11, 132, 141)',
       data: dateData,
     }]
   };
