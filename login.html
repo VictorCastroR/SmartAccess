@@ -48,12 +48,12 @@
                                     <form class="user">
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Ingresa Email ..." required>
+                                                id="exampleInputEmail" name="exampleInputEmail" aria-describedby="emailHelp"
+                                                placeholder="Ingresa Email ...">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Contraseña" required>
+                                                id="exampleInputPassword" name="exampleInputPassword" placeholder="Contraseña" required>
                                         </div>
                                         <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
@@ -61,7 +61,8 @@
                                                 <label class="custom-control-label" for="customCheck">Recuerdame</label>
                                             </div>
                                         </div>
-                                        <button onClick="validate()" class="btn btn-primary btn-user btn-block" >Login</button>
+                                        <a onClick="validate()" class="btn btn-primary btn-user btn-block" >Login</a>
+
                                         <hr>
                                         <a href="index.html" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Login con Google
@@ -96,8 +97,8 @@
     <!-- Core plugin JavaScript-->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <script src="js/demo/validacion.js"></script>
-
-    <!-- Custom scripts for all pages-->
+<!--  
+     Custom scripts for all pages -->
     <script src="js/sb-admin-2.min.js"></script>
 
 </body>
